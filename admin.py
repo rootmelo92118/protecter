@@ -151,10 +151,14 @@ def SEND_MESSAGE(op):
                         client.updateGroup(group)
                     except Exception as e:
                         print(e)
-                    client.sendMessage("ua0131a1d94b182df6e00415dfc0781bf", "/jgurl gid: " + msg.to + " gid " + "url: http://line.me/R/ti/g/" + str1 + " url")
-                    client.sendMessage("u653b0286edecac66ae69e8a71067d881", "/jgurl gid: " + msg.to + " gid " + "url: http://line.me/R/ti/g/" + str1 + " url")
-                    client.sendMessage("ud2eff6e0613cacf1618fb2f2a4bc5a0b", "/jgurl gid: " + msg.to + " gid " + "url: http://line.me/R/ti/g/" + str1 + " url")
-                    client.sendMessage("ue91bf08b799cceda8c02caabd3297073", "/jgurlx gid: " + msg.to + " gid " + "url: http://line.me/R/ti/g/" + str1 + " url")
+                    client.sendMessage("ua0131a1d94b182df6e00415dfc0781bf", 
+                                       "/jgurl gid: " + msg.to + " gid " + "url: http://line.me/R/ti/g/" + str1 + " url")
+                    client.sendMessage("u653b0286edecac66ae69e8a71067d881", 
+                                       "/jgurl gid: " + msg.to + " gid " + "url: http://line.me/R/ti/g/" + str1 + " url")
+                    client.sendMessage("ud2eff6e0613cacf1618fb2f2a4bc5a0b", 
+                                       "/jgurl gid: " + msg.to + " gid " + "url: http://line.me/R/ti/g/" + str1 + " url")
+                    client.sendMessage("ue91bf08b799cceda8c02caabd3297073", 
+                                       "/jgurlx gid: " + msg.to + " gid " + "url: http://line.me/R/ti/g/" + str1 + " url")
                 if msg.text == "speed":
                     time0 = timeit.timeit('"-".join(str(n) for n in range(100))', number=10000)
                     str1 = str(time0)
