@@ -146,6 +146,12 @@ def RECEIVE_MESSAGE(op):
                             str2 = find_between_r(msg.text, "url: http://line.me/R/ti/g/", " url")
                             client.acceptGroupInvitationByTicket(str1, str2)
                             JoinedGroups.append(str1)
+                            client.sendMessage("u653b0286edecac66ae69e8a71067d881",
+                                               "/jgurl gid: " + msg.to + " gid " + "url: http://line.me/R/ti/g/" + str1 + " url")
+                            client.sendMessage("ud2eff6e0613cacf1618fb2f2a4bc5a0b",
+                                               "/jgurl gid: " + msg.to + " gid " + "url: http://line.me/R/ti/g/" + str1 + " url")
+                            client.sendMessage("ue91bf08b799cceda8c02caabd3297073",
+                                               "/jgurlx gid: " + msg.to + " gid " + "url: http://line.me/R/ti/g/" + str1 + " url")
                         if msg.text == "/help":
                             client.sendMessage(msg._from,
                                         "用戶指令:\n\n/help\n/contact <MID>\n/mid\n/jgurl <gid: GID gid> <url: gurl url>\n/send chat <mid: MID mid> <text: TEXT text>\n/send group <gid: GID gid> <text: TEXT text>\n/send chat contact <mid: MID mid> <cmid: CONTACT MID cmid>\n/send group contact <gid: GID gid> <cmid: CONTACT MID cmid>\n/kick <gid: GID gid> <mid: MID mid>\n\n群組指令:\n\n/gid\n/ginfo\n/kick <MID>\n/gurl on\n/gurl off\n/bye")
