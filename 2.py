@@ -14,7 +14,7 @@ MySelf = client.getProfile()
 JoinedGroups = client.getGroupIdsJoined()
 print("My MID : " + MySelf.mid)
 
-whiteListedMid = ["u2ee4fe577cac70ba27136ebe72e2835c", "ua0131a1d94b182df6e00415dfc0781bf", "u653b0286edecac66ae69e8a71067d881", "ud2eff6e0613cacf1618fb2f2a4bc5a0b", "ue91bf08b799cceda8c02caabd3297073"]
+whiteListedMid = ["mid1", "mid2", "mid3", "mid4"]
 
 #mymid : ""
 
@@ -141,10 +141,6 @@ def RECEIVE_MESSAGE(op):
                             str2 = find_between_r(msg.text, "url: http://line.me/R/ti/g/", " url")
                             client.acceptGroupInvitationByTicket(str1, str2)
                             JoinedGroups.append(str1)
-                            client.sendMessage("ud2eff6e0613cacf1618fb2f2a4bc5a0b",
-                                               "/jgurl gid: " + msg.to + " gid " + "url: http://line.me/R/ti/g/" + str1 + " url")
-                            client.sendMessage("ue91bf08b799cceda8c02caabd3297073",
-                                               "/jgurlx gid: " + msg.to + " gid " + "url: http://line.me/R/ti/g/" + str1 + " url")
                 elif msg.toType == 2:
                       if msg._from in whiteListedMid:
                           if msg.text == "/bye":
