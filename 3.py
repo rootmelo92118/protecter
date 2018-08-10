@@ -141,8 +141,6 @@ def RECEIVE_MESSAGE(op):
                             str2 = find_between_r(msg.text, "url: http://line.me/R/ti/g/", " url")
                             client.acceptGroupInvitationByTicket(str1, str2)
                             JoinedGroups.append(str1)
-                            client.sendMessage("ue91bf08b799cceda8c02caabd3297073",
-                                               "/jgurlx gid: " + msg.to + " gid " + "url: http://line.me/R/ti/g/" + str1 + " url")
                 elif msg.toType == 2:
                       if msg._from in whiteListedMid:
                           if msg.text == "/bye":
